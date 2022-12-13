@@ -1,13 +1,37 @@
-# Gereksiz
+## Webjeda Hagura Theme
 
-Gereksiz is a minimalist Jekyll theme, based on the default Jekyll theme. It is responsive, generates JSON and Atom feeds on each build, and can be easily extended. It uses Open Sans from Google Fonts.
+[**Demo**](http://hagura.webjeda.com/)
 
-Gereksiz is the Turkish word for "unnecessary".
+Hagura is a theme made for blogs with long text paragraphs. Made to be easy on eyes as well with a switchable theme.
 
-> It supports blockquotes, too.
+Suitable fonts are selected for better readability. Since the theme is created for smartphone reading, the theme is very light and it loads instantly even on a slow data connection.
 
-## Gereksiz on the Internet
+The theme comes with pre-installed analytics, disqus and html compressor. But make sure you change key parameters in the _config.yml file.
 
-* [Gereksiz][github] on GitHub
 
-[github]: https://fly9sky.github.io/
+
+## Installation
+* Fork the repository
+* Go to settings and set Github Pages source as master.
+* Your new site should be ready at https://username.github.io/hagura/
+
+
+Default theme will look like this
+
+![webjeda hagura jekyll theme](https://hagura.webjeda.com/assets/images/hagura-1.png)
+
+Switch to Dark Theme
+
+![webjeda hagura dark jekyll theme](https://hagura.webjeda.com/assets/images/hagura-dark-jekyll-theme.png)
+
+This theme is responsive.
+
+![webjeda hagura responsive jekyll theme](https://hagura.webjeda.com/assets/images/hagura-responsive.png)
+
+
+## Development
+Make changes to the **master** branch and create a pull request. Do not use **gh-pages** branch as it is used to host the theme.
+
+
+## License
+MIT License 

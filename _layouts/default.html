@@ -1,26 +1,46 @@
+---
+# layout: compress
+---
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="description" content="Personal blog of Berk Özbalcı, about computers, math and music">
-      <meta name="author" content="Berk Özbalcı">
-      <meta name="viewport" content="width=device-width">
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/normalize.css">
-      <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
-      <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
-      <link rel="alternate" type="application/atom+xml" href="{{ site.baseurl }}/atom.xml">
-      <title>{{ page.title }}</title>
-   </head>
-   
-   <body>
-      <main>
-         <header>
-            <h1 class="title"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-         </header>
+<html>
 
-         {{ content }}
-      </main>
-   </body>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+
+        {% seo %}
+    </head>
+
+    <body style="background-color: rgb(255, 255, 255)">
+        <script async src="{{site.baseurl}}/assets/js/theme.min.js"></script>
+        <header>
+            <a href="{{site.baseurl}}/">
+                <div class="home"></div>
+            </a>
+        </header>
+
+        <main>
+            <article>
+                {{ content }}
+            </article>
+        </main>
+
+        <footer>
+            <div class="links">
+                <a href="{{site.baseurl}}/about/">About</a>
+                <a href="{{site.baseurl}}/contact/">Contact</a>
+                <a class="theme" onclick="theme()">Dark/Light</a>
+            </div>
+            <p class="copy">
+                <small>Copyrights by
+                    {{site.title}}
+                    | Developed by
+                    <a href="http://webjeda.com">webjeda</a>
+                </small>
+            </p>
+        </footer>
+        {% include analytics.html %}
+    </body>
+
 </html>
