@@ -29,4 +29,4 @@ In order to update the Bourbon folder:
     bourbon update
     
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tybenz/exemplar/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tybenz/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
