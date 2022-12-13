@@ -1,11 +1,7 @@
-{% if site.theme.katex %}
-<script src="{{ "/js/katex_init.js" | prepend: site.baseurl }}"></script>
-{% endif %}
+<footer class="site-footer">
 
-{% if site.theme.footer_text %}
-<footer id="page-footer-trans" class="page-footer">
-	<!--<p class="text">{{ site.theme.footer_text }}</p>-->
-	Copyright &copy; {{ site.time | date: '%Y' }} {{ site.theme.footer_text }} All Rights Reserved. 
-	<p class="text">Hosted by <a href="https://github.com">GitHub</a>. Theme created by <a href="https://github.com/fengzhichu/fengzhichu-theme/tree/gh-pages">枫之楚</a></p>
+  <div class="wrapper">
+  	<p>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a> Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a> and text generated with <a href="http://hipsum.co" target="_blank">Hipster Ipsum</a>. &#169; 2015</p>
+  </div>
+
 </footer>
-{% endif %}
