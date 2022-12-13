@@ -1,72 +1,61 @@
-<header>
-    <div class="container">
-        <div class="profile">
-            <div class="social">
-                <a href="http://fly9sky.github.io">
-                    <div data-picture data-alt="Twitter">
-                        <div data-src="/img/twitter16.png"></div>
-                        <div data-src="/img/twitter32.png"     data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
-                        <noscript><img src="/img/twitter16.png" alt="Twitter"></noscript>
-                    </div>
-                </a>
-                <a href="http://fly9sky.github.io">
-                    <div data-picture data-alt="Github">
-                        <div data-src="/img/octocat16.png"></div>
-                        <div data-src="/img/octocat32.png"     data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
-                        <noscript><img src="/img/octocat16.png" alt="Github"></noscript>
-                    </div>
-                </a>
-            </div>
-            <div class="avatar" data-picture data-alt="avatar">
-                <div data-src="{% include avatar_url %}?s=54"></div>
-                <div data-src="{% include avatar_url %}?s=108" data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
-                <noscript><img src="{% include avatar_url %}?s=54" alt="avatar"></noscript>
-            </div>
-        </div>
-        <h5 class="logo"><a href="http://fly9sky.github.io">Tyler Benziger</a></h5>
-        <nav class="main">
-            <ul>
-                {% if page.nav == "blog" %}
-                    <li><a href="http://fly9sky.github.io" class="active">Blog</a></li>
-                {% else %}
-                    <li><a href="http://fly9sky.github.io">Blog</a></li>
-                {% endif %}
-                {% if page.nav == "about" %}
-                <li><a href="http://fly9sky.github.io/about" class="active">About</a></li>
-                {% else %}
-                <li><a href="http://fly9sky.github.io/about">About</a></li>
-                {% endif %}
-                {% if page.nav == "projects" %}
-                <li><a href="http://fly9sky.github.io/projects" class="active">Projects</a></li>
-                {% else %}
-                <li><a href="http://fly9sky.github.io/projects">Projects</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-        <div class="nav-slider">
-            <div class="nav-selection {{ page.nav }}"></div>
-        </div>
-        <div class="subnav-slider">
-            <div class="subnav-selection {{ page.subnav }}"></div>
-        </div>
-        <nav class="subnav">
-            <ul>
-                {% if page.subnav == "exemplar-home" %}
-                  <li><a href="/exemplar" class="active" data-subnav="exemplar-home">Home</a></li>
-                {% else %}
-                    <li><a href="/exemplar" data-subnav="exemplar-home">Home</a></li>
-                {% endif %}
-                {% if page.subnav == "exemplar-docs" %}
-                    <li><a href="/docs" class="active" data-subnav="exemplar-docs">Docs</a></li>
-                {% else %}
-                    <li><a href="/docs" data-subnav="exemplar-docs">Docs</a></li>
-                {% endif %}
-                {% if page.subnav == "download" %}
-                    <li><a href="https://github.com/tybenz/archive/master.zip" class="active" data-subnav="download">Download</a></li>
-                {% else %}
-                    <li><a href="https://github.com/tybenz/archive/master.zip" data-subnav="download">Download</a></li>
-                {% endif %}
-            </ul>
-        </nav>
+---
+title: Exemplar
+nav: projects
+subnav: exemplar-home
+layout: default
+---
+<p>
+  This is an example of the default theme I use for my jekyll sites. This
+  theme is used for my <a href="http://fly9sky.github.io">blog</a> and my project sites.
+</p>
+
+<p>
+  This site uses a combination of the following:
+</p>
+
+<ol>
+  <li><a href="http://jekyllrb.com/">Jekyll</a>: Static site generator</li>
+  <li><a href="http://sass-lang.com">Sass</a>: CSS preprocessor</li>
+  <li><a href="http://bourbon.io">Bourbon</a>: Set of generic Sass mixins</li>
+  <li><a href="http://neat.bourbon.io">Neat</a>: Set of grid-based Sass mixins (dependent on Bourbon)</li>
+  <li>Fonts: <a href="http://www.fontsquirrel.com/fonts/bebas-neue">Bebas Neue</a>, <a href="https://github.com/adobe/source-sans-pro">Adobe Source Sans Pro</a>, <a href="https://github.com/adobe/source-code-pro">Adobe Source Code Pro</a></li>
+</ol>
+
+<br />
+
+<article class="post no-border">
+    <div class="post-header">
+        <p class="date">Feb 21, 2012</p>
+        <h1>Posts</h1>
     </div>
-</header>
+    <div class="post-body">
+      <p>
+        This is what a post looks like. Straight forward. Date goes above the header. Content goes below the header.
+      </p>
+      <p>Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    </div>
+</article>
+
+<h1>Boxes</h1>
+<div id="projects">
+  {% for page in site.pages %}
+    {% if page.box == true %}
+      {% if page.link %}
+        <a class="project" href="{{ page.link }}">
+      {% else %}
+        <a class="project" href="{{ page.url | replace: '/index.html', '' }}">
+      {% endif %}
+          <div class="project-header">
+              <h2>
+                  {{ page.title }}
+              </h2>
+          </div>
+          <div class="project-body">
+            <p>
+                {{ page.summary }}
+            </p>
+          </div>
+        </a>
+    {% endif %}
+  {% endfor %}
+</div>
