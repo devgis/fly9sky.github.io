@@ -1,16 +1,32 @@
-A [Jekyll](https://jekyllrb.com/) blog template made for simple, readable snippets of your brain drippings.
+#Exemplar
 
-[DEMO](http://adueck.github.io/cayman-blog/)
+This is my jekyll site template. Used for blog and project pages.
 
-To get this going follow these simple steps:
+#Getting Started
 
-1. Fork, clone, or download the repository
-2. Edit <code>_config.yml</code>
-3. If you want, swap `img/cover.jpg` for your own header image
-3. Fill up the `_posts` folder with whatever you want to say
-4. run <code>jekyll build</code> and then <code>jekyll serve</code>  
-note: This will require the `jekyll-paginate` gem `$ gem install jekyll-paginate`
+First, make sure you have the `jekyll` and `sass` gems installed. In your terminal run:
 
-You can easily host your blog for free on [GitHub Pages](https://pages.github.com/)
+    gem install jekyll
+    gem install sass
 
-I made this Jekyll theme by adapting and modifying the [Cayman Theme](https://github.com/jasonlong/cayman-theme) by [Jason Lang](https://github.com/jasonlong), which is licensed under a [Creative Commons Attribution 4.0 International license](http://creativecommons.org/licenses/by/4.0/).
+You can optionally install the *bourbon* gem in order to update the Bourbon folder:
+
+    gem install bourbon
+    cd _sass
+    bourbon install
+
+Start running Jekyll (defaults to port 4000) and watching Sass:
+
+    rake // 'rake watch' also works
+
+Before deploying your site, stop `rake watch` and run `rake generate` to generate a production-ready site (no Scss comments).
+
+## Updating Bourbon
+
+In order to update the Bourbon folder:
+
+    cd _sass/
+    bourbon update
+    
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tybenz/exemplar/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

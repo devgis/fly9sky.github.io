@@ -1,3 +1,4 @@
-source 'https://rubygems.org'
-gem 'github-pages'
-gem 'jekyll-paginate'
+source :rubygems
+
+gem "jekyll", "~> 0.11.2"
+gem "neat", "~> 1.0.0"
