@@ -1,2 +1,16 @@
-# Renge
-Renge is designed by Junchao (www.junchaowang.com), inspired by the amination called "のんのんびより" and named by one of the Characters, Renge Miyauchi (宮内 れんげ). If you have any questions, you can reach me via <a href="https://github.com/billyfish152/Renge">Renge on GitHub</a> by submitting an issue or via email billyfish152[at]gmail.com.
+A [Jekyll](https://jekyllrb.com/) blog template made for simple, readable snippets of your brain drippings.
+
+[DEMO](http://adueck.github.io/cayman-blog/)
+
+To get this going follow these simple steps:
+
+1. Fork, clone, or download the repository
+2. Edit <code>_config.yml</code>
+3. If you want, swap `img/cover.jpg` for your own header image
+3. Fill up the `_posts` folder with whatever you want to say
+4. run <code>jekyll build</code> and then <code>jekyll serve</code>  
+note: This will require the `jekyll-paginate` gem `$ gem install jekyll-paginate`
+
+You can easily host your blog for free on [GitHub Pages](https://pages.github.com/)
+
+I made this Jekyll theme by adapting and modifying the [Cayman Theme](https://github.com/jasonlong/cayman-theme) by [Jason Lang](https://github.com/jasonlong), which is licensed under a [Creative Commons Attribution 4.0 International license](http://creativecommons.org/licenses/by/4.0/).
